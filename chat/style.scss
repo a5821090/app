@@ -1,0 +1,404 @@
+$background-dark:           #9d9aea;
+$yellow:                    #F4E96B;
+$pink:                      #EB4E89;
+$blue:                      #77D6E2;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+*,
+*:before,
+*:after
+{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-dark;
+    padding: 4em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mess-list-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.mydate{
+  font-size: small;
+}
+.mess-list-title-container {
+  margin-top: 16px;
+  text-align: center;
+  
+}
+
+.mess-list-title {
+  margin: 0;
+  color: #77D6E2;
+  font-family: 'Lato';
+}
+
+.mess-list-caption {
+  margin: 0;
+  color: #77D6E2;
+  font-family: 'Lato';
+}
+
+.mess-list form {
+  margin: 16px 0;
+  width: 95%;
+  display: flex;
+  position: fixed;
+  top: 413px;
+  left: 12px;
+  z-index: 100;
+}
+
+.mess-list form input {
+  flex: 1;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 00.25rem;
+  margin-right: 8px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+
+.mess {
+  display: flex;
+  font-family: 'Noto Serif JP', sans-serif;
+  align-items: center;
+  margin-bottom: 16px;
+  animation: poyoyon 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+.mess div {
+  margin-left: 8px;
+  flex: 1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+}
+
+
+/* CSSアニメーションの設定 */
+@keyframes poyoyon {
+  0% {
+    transform: translateX(140px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+  }
+  65% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.mess input {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+
+nav {
+    margin: .5em 0 3em;
+    font-size: 1.2em;
+}
+.menu__list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu__item {
+  display: block;
+  margin: 1em 0;
+  margin: 0 .5em;
+}
+.menu__link{
+  font-family: 'Lato';
+    font-weight: 300;
+    font-size: 1em;
+}
+.reset  {
+  font-family: 'Lato';
+    font-weight: 300;
+    font-size: 1em;
+  display: block;
+  padding: .5em 1em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  text-align: center;
+  color: $yellow;
+  background-color:#77D6E2;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  border: solid 2px $pink;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.reset:hover, 
+.reset:focus {
+  outline: none;
+  color: $pink;
+}
+.menu__item--current .menu__link {
+  color: $blue;
+}
+.menu__link:before,
+.menu__link:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  border: 2px solid $pink;
+  transition: transform 0.3s, opacity 0.3s;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+}
+.menu__link:before {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+  transform: translate3d(10px, 10px, 0);
+}
+.menu__link:after {
+  right: 0;
+  bottom: 0;
+  border-width: 0 2px 2px 0;
+  transform: translate3d(-10px, -10px, 0);
+}
+.menu__item--current .menu__link:before,
+.menu__item--current .menu__link:after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+footer {
+  margin: 3em 0 1em;
+  position: relative;
+}
+
+/* phone */
+#phone {
+  width: 500px;
+  height: 640px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  position: relative;
+  left: 65%;
+  top: 50px;
+  margin: 0 -285px;
+  background: #fff;
+}
+#screen {
+  width: 450px;
+  height: 520px;
+  border: 1px solid #ccc;
+  position: relative;
+  left: 34%;
+  top: 50%;
+  margin: -260px -145px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+#home {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ccc;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: 0 -18px;
+  border-radius: 50%;
+}
+#speaker {
+  width: 50px;
+  height: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  margin: 0 -25px;
+}
+
+#header {
+  height: 46px;
+  background: #353541;
+  position: relative;
+  z-index: 30;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+}
+#footer {
+  height: 46px;
+  background: #353541;
+  position: relative;
+  top: 426px;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.pullmenu-icon {
+  width: 16px;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  right: 20px;
+  bottom: 27px;
+  transition: opacity .2s ease-in-out;
+  
+  &:after {
+    content: '';
+    width: 8px;
+    height: 2px;
+    background: #FFF;
+    position: absolute;
+    top: 10px;
+    left: 4px;
+  }
+  
+  &:before {
+    content: '';
+    width: 16px;
+    height: 2px;
+    background: #FFF;
+    position: absolute;
+    top: 5px; 
+    left: 0;
+  }
+  
+  &.hide {
+    opacity: 0;
+  }
+}
+
+#title {
+  height: 46px;
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 3000px;
+  position: absolute;
+  top: 50%;
+  margin: -15px 0px;
+  
+
+  li {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0 20px;
+    opacity: 0;
+    
+    
+    &.show {
+      opacity: 1!important;
+    }
+    
+   
+  }
+  
+
+}
+
+
+
+
+.pages {
+  transform: translate3d(0,0,0);
+  transition: opacity .2s linear;
+  z-index: 29;
+  position: absolute;
+  width: 450px;
+  height: 95%;
+  &.hide {
+    transition: opacity .1s linear;
+    opacity:0;
+  }
+}
+
+.page {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 425px;
+  display: none;
+  padding-right: 15px;
+}
+#latest {
+  display: block;
+}
+
+
+
+#text {
+  position: absolute;
+  height: 640px;
+  left: 50%;
+  top: 50px;
+  margin: 0px 75px;
+  color: #77D6E2;
+  font-size: large;
+  font-family: 'Lato';
+  
+  h1 {
+    margin: 0;
+  font-size: 70px;
+  line-height: 60px;
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: 23px;
+    margin: 0;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  
+  h3 {
+    opacity: 0.3;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+
+
+
+

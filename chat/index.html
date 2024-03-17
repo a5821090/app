@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <script type="text/javascript" src="./jquery-3.6.0.min.js"></script>
+    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+    <link rel='stylesheet' href='./style.css'>
+    
+  
+ 
+    
+</head>
+<body>
+  <nav role="navigation">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <button class="menu__link">Welcome!</button>
+      </li>
+    </ul>
+  </nav>
+    <header role="banner">
+        <div class="mess-list-title-container">
+          <h1 class="mess-list-title">Message Board</h1>
+            <p class="mess-list-caption">Let's Enjoy Chat</p>
+        </div>
+        <div id="phone">
+          <div id="speaker"></div>
+            <div id="screen">
+              <div id="header">
+                <ul id="menu">
+                  <li>Chat</uli>
+              </div>
+              <div class="pages">
+                <div class="page" id="latest">
+                  <div class="mess-list" >
+                    <div id="mess-list-container" >
+                      <form id="mess-list-form">
+                        <input id="mess-title-filed" placeholder="Please Enter Sentence">
+                        <button class="reset">Send!</button>
+                      </form>
+                    </div>    
+                  </div>
+                </div>
+              </div>
+              <div id="footer"></div>
+            </div>
+          <div id="home"></div>
+        </div>
+    </header>   
+</body>
+<script type="text/javascript" src="./chat.js"></script>
+</html>
